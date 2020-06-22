@@ -1,0 +1,506 @@
+{% if fulfillment.item_count == item_count %}
+{% capture shipment_name %}Your order is{% endcapture %}
+{% elsif fulfillment.item_count > 1 %}
+{% if fulfillment_status == 'fulfilled' %}
+{% capture shipment_name %}The last items in your order are{% endcapture %}
+{% else %}
+{% capture shipment_name %}Some items in your order are{% endcapture %}
+{% endif %}
+{% else %}
+{% if fulfillment_status == 'fulfilled' %}
+{% capture shipment_name %}The last item in your order is{% endcapture %}
+{% else %}
+{% capture shipment_name %}One item in your order is{% endcapture %}
+{% endif %}
+{% endif %}
+
+{% capture email_title %}{{ shipment_name }} on the way{% endcapture %}
+{% capture email_body %}{{ shipment_name }} on the way to you. Track your shipment to see the delivery
+status.{% endcapture %}
+{% capture email_emphasis %}Estimated delivery date:
+<strong>{{fulfillment.estimated_delivery_at | date: "%B %-d, %Y"}}</strong>{% endcapture %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>{{ email_title }}</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta name="viewport" content="width=device-width">
+  <link rel="stylesheet" type="text/css" href="/assets/notifications/styles.css">
+  <style>
+    .button__cell {
+      background: {
+          {
+          shop.email_accent_color
+        }
+      }
+
+      ;
+    }
+
+    a,
+    a:hover,
+    a:active,
+    a:visited {
+      color: {
+          {
+          shop.email_accent_color
+        }
+      }
+
+      ;
+    }
+  </style>
+</head>
+
+<body>
+
+  <table class="body">
+    <tr>
+      <td>
+        <table class="header row">
+          <tr>
+            <td class="header__cell">
+              <center>
+
+                <table class="container">
+                  <tr>
+                    <td>
+
+                      <table class="row">
+                        <tr>
+                          <td class="shop-name__cell">
+                            {%- if shop.email_logo_url %}
+                            <!--<center> <img src="{{shop.email_logo_url}}" alt="{{ shop.name }}" width="{{ shop.email_logo_width }}"></center>-->
+                            {%- else %}
+                            <h1 class="shop-name__text">
+                              <a href="{{shop.url}}">{{ shop.name }}</a>
+                            </h1>
+                            {%- endif %}
+                          </td>
+
+                          <td class="order-number__cell">
+                            <span class="order-number__text">
+                              Order {{ order_name }}
+                            </span>
+                          </td>
+                        </tr>
+                      </table>
+                      <table align="center" bgcolor="#ffffff" border="0" cellpadding="0" cellspacing="0" width="100%"
+                        style="margin:0 auto;width:600px;">
+                        <tr>
+                          <td align="center" valign="top">
+                            <table align="center" border="0" cellpadding="0" cellspacing="0" class="em_main_table"
+                              style="table-layout:fixed;" width="600">
+                              <!--============Pre-Header Section============-->
+                              <tr>
+                                <td align="center" style="line-height:0px;font-size:0px;">
+                                  <div
+                                    style="display:none;font-size:1px;color:#ffffff;line-height:1px;font-family:Arial, Helvetica, sans-serif;max-height:0px;max-width:0px;opacity:0;overflow:hidden;mso-hide:all;">
+
+                                  </div>
+                                </td>
+                              </tr>
+                              <!--============//Pre-Header Section============-->
+                              <tr>
+                                <td class="em_hide" style="line-height:0px; font-size:0px;" width="600">
+                                  <img alt="" border="0" height="1" src="http://images.emailaptitude.com/spacer.gif"
+                                    style="max-height:1px; min-height:1px; display:block; width:600px; min-width:600px;"
+                                    width="600" />
+                                </td>
+                              </tr>
+                              <!--=== HEADER SECTION === -->
+                              <tr>
+                                <td class="em_height" height="20" style="height:30px;line-height:1px;font-size:1px;">
+                                  &nbsp;
+                                </td>
+                              </tr>
+                              <tr>
+                                <td align="center" valign="top"><a href="https://www.diamondartclub.com/"
+                                    style="text-decoration:none;" target="_blank">
+                                    <img alt="DIAMOND ART CLUB" border="0" class="em_full_img" height="97"
+                                      src="http://images.emailaptitude.com/diamond_art_club/2019/january/01.17.19_New_Year_New_Hobby/logo-new.png"
+                                      style="display:block; max-width:400px; font-family:Arial, sans-serif; font-size:16px; line-height:24px; color:#61146b;"
+                                      width="400" /> </a>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td height="25" style="height:25px;line-height:1px;font-size:1px;">
+                                  &nbsp;
+                                </td>
+                              </tr>
+                              <tr>
+                                <td align="center" bgcolor="#61146b" valign="top">
+                                  <table align="center" border="0" cellpadding="0" cellspacing="0" class="em_wrapper"
+                                    style="width:100%;" width="100%">
+                                    <tr>
+                                      <td
+                                        style="color:#ffffff; text-decoration: none;font-family: Arial, Helvetica, sans-serif;">
+                                        <a href="https://www.diamondartclub.com/collections/new-arrivals"
+                                          style="text-decoration:none; color:#ffffff;" target="_blank">
+                                          <img alt="NEW" border="0" class="em_full_img" height="35"
+                                            src="http://images.emailaptitude.com/diamond_art_club/2019/january/01.17.19_New_Year_New_Hobby/menu.jpg"
+                                            style="display:block; font-size:14px; line-height: 18px; font-family:Arial, Helvetica, sans-serif; color:#ffffff; max-width: 200px; text-transform:uppercase;"
+                                            width="200" /> </a>
+                                      </td>
+                                      <td
+                                        style="color:#ffffff; text-decoration: none;font-family: Arial, Helvetica, sans-serif;">
+                                        <a href="https://www.diamondartclub.com/collections/best-sellers"
+                                          style="text-decoration:none; color:#ffffff;" target="_blank">
+                                          <img alt="BEST SELLERS" border="0" class="em_full_img" height="35"
+                                            src="http://images.emailaptitude.com/diamond_art_club/2019/january/01.17.19_New_Year_New_Hobby/menu-02.jpg"
+                                            style="display:block; font-size:14px; line-height: 18px; font-family:Arial, Helvetica, sans-serif; color:#ffffff; max-width: 171px; text-transform:uppercase;"
+                                            width="171" /> </a>
+                                      </td>
+                                      <td
+                                        style="color:#ffffff; text-decoration: none;font-family: Arial, Helvetica, sans-serif;">
+                                        <a href="https://www.diamondartclub.com/?st_intent=st:core:home"
+                                          style="text-decoration:none; color:#ffffff;" target="_blank">
+                                          <img alt="REWARDS" border="0" class="em_full_img" height="35"
+                                            src="http://images.emailaptitude.com/diamond_art_club/2019/january/01.17.19_New_Year_New_Hobby/menu-03.jpg"
+                                            style="display:block; font-size:14px; line-height: 18px; font-family:Arial, Helvetica, sans-serif; color:#ffffff; max-width: 227px; text-transform:uppercase;"
+                                            width="227" /> </a>
+                                      </td>
+                                    </tr>
+                                  </table>
+                                </td>
+                              </tr>
+                            </table>
+                          </td>
+                        </tr>
+                      </table>
+                      <!--=== HEADER SECTION === -->
+
+                    </td>
+                  </tr>
+                </table>
+
+              </center>
+            </td>
+          </tr>
+        </table>
+
+        <table class="row content">
+          <tr>
+            <td class="content__cell">
+              <center>
+                <table class="container">
+                  <tr>
+                    <td>
+
+                      <h2>{{ email_title }}</h2>
+                      <p>{{ email_body }}</p>
+                      {% if fulfillment.estimated_delivery_at %}
+                      <p>{{ email_emphasis }}</p>
+                      {% endif %}
+                      {% if order_status_url %}
+                      <table class="row actions">
+                        <tr>
+                          <td class="actions__cell">
+                            <table class="button main-action-cell">
+                              <tr>
+                                <td class="button__cell" style="display: none;"><a href="{{ order_status_url }}"
+                                    class="button__text">Track your order</a></td>
+                                {% for trackingUrl in fulfillment.tracking_urls %}
+                                <td class="button__cell"><a href="{{ trackingUrl | escape }}" class="button__text">Track
+                                    Your Package</a>
+                                  {% endfor %}</td>
+                              </tr>
+                            </table>
+                            {% if shop.url %}
+                            <table class="link secondary-action-cell">
+                              <tr>
+                                <td class="link__cell">or <a href="{{ shop.url }}">Visit our store</a></td>
+                              </tr>
+                            </table>
+                            {% endif %}
+                          </td>
+                        </tr>
+                        <tr>
+                          <td class="actions__cell" style="padding: 25px 0 0;">
+                            <strong>Tracking Number</strong>: <span>{{ fulfillment.tracking_number }}</span>
+                            <br />
+                            <strong>Shipping Provider</strong>: <span>{{ fulfillment.tracking_company
+ }} - <a href="{{ fulfillment.tracking_url
+ }}">Click here to track your order!</a></span>
+                            <p style="margin-top: 1rem;">
+                              <span style="color: #666;">Please note, it could take some time for the tracking
+                                information to show on the above.</span>
+                            </p>
+                          </td>
+                        </tr>
+                      </table>
+
+                      {% else %}
+                      {% if shop.url %}
+                      <table class="row actions">
+                        <tr>
+                          <td class="actions__cell">
+                            <table class="button main-action-cell">
+                              <tr>
+                                <td class="button__cell"><a href="{{ shop.url }}" class="button__text">Visit our
+                                    store</a></td>
+                              </tr>
+                            </table>
+                          </td>
+                        </tr>
+                      </table>
+                      {% endif %}
+
+                      {% endif %}
+
+                    </td>
+                  </tr>
+                </table>
+              </center>
+            </td>
+          </tr>
+        </table>
+
+        <table class="row section">
+          <tr>
+            <td class="section__cell">
+              <center>
+                <table class="container">
+                  <tr>
+                    <td>
+                      <h3>Items in this shipment</h3>
+                    </td>
+                  </tr>
+                </table>
+                <table class="container">
+                  <tr>
+                    <td>
+
+
+                      <table class="row">
+                        {% for line in fulfillment.fulfillment_line_items %}
+                        <tr class="order-list__item">
+                          <td class="order-list__item__cell">
+                            <table>
+                              <td>
+                                {% if line.line_item.image %}
+                                <img src="{{ line.line_item | img_url: 'compact_cropped' }}" align="left" width="60"
+                                  height="60" class="order-list__product-image" />
+                                {% endif %}
+                              </td>
+                              <td class="order-list__product-description-cell">
+                                {% if line.line_item.product.title %}
+                                {% assign line_title = line.line_item.product.title %}
+                                {% else %}
+                                {% assign line_title = line.line_item.title %}
+                                {% endif %}
+
+                                {% if line.quantity < line.line_item.quantity %}
+                                {% capture line_display %} {{ line.quantity }} of {{ line.line_item.quantity }}
+                                {% endcapture %}
+                                {% else %}
+                                {% assign line_display = line.line_item.quantity  %}
+                                {% endif %}
+
+                                <span class="order-list__item-title">{{ line_title }} × {{ line_display }}</span><br />
+
+                                {% if line.line_item.variant.title != 'Default Title' %}
+                                <span class="order-list__item-variant">{{ line.line_item.variant.title }}</span><br />
+                                {% endif %}
+
+                                {% if line.line_item.refunded_quantity > 0 %}
+                                <span class="order-list__item-refunded">Refunded</span>
+                                {% endif %}
+                              </td>
+                            </table>
+                          </td>
+                        </tr>{% endfor %}
+                      </table>
+
+
+                    </td>
+                  </tr>
+                </table>
+              </center>
+            </td>
+          </tr>
+        </table>
+
+        <table class="row footer">
+          <tr>
+            <td class="footer__cell">
+              <center>
+                <table class="container">
+                  <tr>
+                    <td>
+
+                      <p class="disclaimer__subtext">If you have any questions, reply to this email or contact us at <a
+                          href="mailto:{{ shop.email }}">{{ shop.email }}</a></p>
+                    </td>
+                  </tr>
+                </table>
+              </center>
+            </td>
+          </tr>
+        </table>
+
+        <img src="{{ 'notifications/spacer.png' | shopify_asset_url }}" class="spacer" height="1" />
+
+      </td>
+    </tr>
+  </table>
+  <!--footer section -->
+  <table align="center" class="row float-center"
+    style="Margin:0 auto;border-collapse:collapse;border-spacing:0;float:none;margin:0 auto;padding:0;position:relative;text-align:center;vertical-align:top;width:600px;">
+    <tr>
+      <td align="center" bgcolor="#ebebeb" valign="top">
+        <table align="center" border="0" cellpadding="0" cellspacing="0" class="em_wrapper" width="100%">
+          <tr>
+            <td height="31" style="height:31px;line-height:1px;font-size:1px;">
+            </td>
+          </tr>
+          <tr>
+            <td align="center" valign="top">
+              <img alt="FOLLOW US" border="0" class="em_full_img" height="23"
+                src="http://images.emailaptitude.com/diamond_art_club/2019/january/01.17.19_New_Year_New_Hobby/follow-us.png"
+                style="display:block; max-width:400px; font-family:Arial, sans-serif; font-size:14px; line-height:20px; color:#333333; font-weight:bold;"
+                width="400" />
+            </td>
+          </tr>
+          <tr>
+            <td height="14" style="height:14px;line-height:1px;font-size:1px;">
+            </td>
+          </tr>
+          <!--============Social Icon Section============-->
+          <tr>
+            <td align="center" valign="top">
+              <table align="center" border="0" cellpadding="0" cellspacing="0" style="width:153px;" width="153">
+                <tr>
+                  <td align="center" valign="top" width="20"> <a href="https://www.facebook.com/diamondartclub"
+                      style="text-decoration:none;" target="_blank">
+                      <img alt="Facebook" border="0" height="20"
+                        src="http://images.emailaptitude.com/diamond_art_club/2019/january/01.17.19_New_Year_New_Hobby/social-ico.png"
+                        style="display:block; max-width:20px; font-family:Arial, sans-serif; font-size:10px; line-height:12px; color:#000000; font-weight:bold;"
+                        width="20" /> </a>
+                  </td>
+                  <td style="width:21px;" width="21">
+                    &nbsp;
+                  </td>
+                  <td align="center" valign="top" width="20"> <a href="https://www.pinterest.com/diamondartclub/"
+                      style="text-decoration:none;" target="_blank">
+                      <img alt="Pinterest" border="0" height="20"
+                        src="http://images.emailaptitude.com/diamond_art_club/2019/january/01.17.19_New_Year_New_Hobby/social-ico-04.png"
+                        style="display:block; max-width:20px; font-family:Arial, sans-serif; font-size:10px; line-height:12px; color:#000000; font-weight:bold;"
+                        width="20" /> </a>
+                  </td>
+                  <td style="width:21px;" width="21">
+                    &nbsp;
+                  </td>
+                  <td align="center" valign="top" width="20"> <a href="https://www.instagram.com/diamondartclub/"
+                      style="text-decoration:none;" target="_blank">
+                      <img alt="Instagram" border="0" height="20"
+                        src="http://images.emailaptitude.com/diamond_art_club/2019/january/01.17.19_New_Year_New_Hobby/social-ico-05.png"
+                        style="display:block; max-width:20px; font-family:Arial, sans-serif; font-size:10px; line-height:12px; color:#000000; font-weight:bold;"
+                        width="20" /> </a>
+                  </td>
+                  <td style="width:21px;" width="21">
+                    &nbsp;
+                  </td>
+                  <td align="center" valign="top" width="20"> <a
+                      href="https://www.youtube.com/channel/UCPQ5Lbh3RwhtGfvXQffdtQw" style="text-decoration:none;"
+                      target="_blank">
+                      <img alt="Youtube" border="0" height="20"
+                        src="http://images.emailaptitude.com/diamond_art_club/2019/january/01.17.19_New_Year_New_Hobby/social-ico-06.png"
+                        style="display:block; max-width:20px; font-family:Arial, sans-serif; font-size:10px; line-height:12px; color:#000000; font-weight:bold;"
+                        width="20" /> </a>
+                  </td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+          <!--============//Social Icon Section============-->
+          <tr>
+            <td height="20" style="height:20px; line-height:0px; font-size:0px;">
+              &nbsp;
+            </td>
+          </tr>
+          <tr>
+            <td align="center" valign="top">
+              <table align="center" border="0" cellpadding="0" cellspacing="0" class="em_wrapper" width="100%">
+                <tr>
+                  <td class="em_side" style="width:80px;" width="80">
+                    &nbsp;
+                  </td>
+                  <td align="center" valign="top">
+                    <table align="center" border="0" cellpadding="0" cellspacing="0" class="em_wrapper" width="100%">
+                      <tr>
+                        <td bgcolor="#cdb47c" height="2" style="line-height:0px; font-size:0px; height:2px;">
+                          <img alt="" border="0" height="1" src="http://images.emailaptitude.com/spacer.gif"
+                            style="display:block;" width="1" />
+                        </td>
+                      </tr>
+                      <tr>
+                        <td height="15" style="height:15px;line-height:1px;font-size:1px;">
+                          &nbsp;
+                        </td>
+                      </tr>
+                      <tr>
+                        <td align="center" class="em_color"
+                          style="font-family:Arial, Helvetica, sans-serif;font-size:9px;line-height:16px;color:#333333; text-transform:uppercase; letter-spacing: .05em;"
+                          valign="top">
+                          750 N San Vicente Blvd, 8th Floor &nbsp;&nbsp;|&nbsp;&nbsp; West Hollywood, CA 90069
+                          &nbsp;&nbsp;|&nbsp;&nbsp; United States
+                        </td>
+                      </tr>
+                      <tr>
+                        <td height="10" style="height:10px;line-height:0px;font-size:0px;">
+                          &nbsp;
+                        </td>
+                      </tr>
+                      <tr>
+                        <td align="center" class="em_color"
+                          style="font-family:Arial, Helvetica, sans-serif;font-size:9px;line-height:16px;color:#333333; letter-spacing: .05em;"
+                          valign="top">
+                          <!--<a class="em_color_u" href="{{customer.unsubscribe_url}}" style="text-decoration: underline;color:#333333;font-size:9px;" target="_blank"> UNSUBSCRIBE </a> &nbsp;&nbsp;|&nbsp;&nbsp;-->
+                          <a class="em_color_u" href="https://www.diamondartclub.com/pages/faq"
+                            style="text-decoration: underline;color:#333333;font-size:9px;" target="_blank"> FAQ</a>
+                          &nbsp;&nbsp;|&nbsp;&nbsp;
+                          <a class="em_color_u" href="https://www.diamondartclub.com/pages/our-story"
+                            style="text-decoration: underline;color:#333333;font-size:9px;" target="_blank"> OUR STORY
+                          </a>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td height="15" style="height:15px;font-size:0px;line-height:0px;">
+                          &nbsp;
+                        </td>
+                      </tr>
+                    </table>
+                  </td>
+                  <td class="em_side" style="width:80px;" width="80">
+                    &nbsp;
+                  </td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+          <tr>
+            <td align="center" valign="top"> <a href="https://www.diamondartclub.com/" style="text-decoration:none;"
+                target="_blank">
+                <img alt="" border="0" class="em_full_img" height="17"
+                  src="http://images.emailaptitude.com/diamond_art_club/2019/january/01.17.19_New_Year_New_Hobby/footer-logo.png"
+                  style="display:block; max-width:200px; font-family:Arial, sans-serif; font-size:14px; line-height:20px; color:#333333; font-weight:bold;"
+                  width="200" /> </a>
+            </td>
+          </tr>
+          <tr>
+            <td height="25" style="height:25px;font-size:0px;line-height:0px;">
+              &nbsp;
+            </td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+    <!--banner section -->
+
+  </table>
+</body>
+
+</html>
