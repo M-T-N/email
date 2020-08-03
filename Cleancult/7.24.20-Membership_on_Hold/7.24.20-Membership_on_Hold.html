@@ -112,8 +112,18 @@
                   <td align="center" style="border-collapse:collapse;mso-line-height-rule:exactly" valign="top"> <a
                       href="https://www.cleancult.com/profile"
                       style="border-collapse:collapse;mso-line-height-rule:exactly;text-decoration:none; color: #00794d;"
-                      target="_blank"> <img alt="Reactivate Your Account" border="0" class="em_full_img"
-                        src="https://images.emailaptitude.com/Cleancult/2020/July/7.24.20-Membership_on_Hold/CC_06.2020_MembershipOnHold_01_04.jpg"
+                      target="_blank"> <img alt="Fix My Account" border="0" class="em_full_img"
+                        src="https://images.emailaptitude.com/Cleancult/2020/July/7.24.20-Membership_on_Hold/CC_06.2020_MembershipOnHold_01_03.gif"
+                        style="border:0;outline:none;display:block;display:block; font-family:Arial, sans-serif; font-size:22px; line-height: 26px; color: #00794d; max-width:600px;"
+                        width="600" /> </a> </td>
+                </tr>
+
+                <tr>
+                  <td align="center" style="border-collapse:collapse;mso-line-height-rule:exactly" valign="top"> <a
+                      href="https://www.cleancult.com/profile"
+                      style="border-collapse:collapse;mso-line-height-rule:exactly;text-decoration:none; color: #00794d;"
+                      target="_blank"> <img alt="What was in this shipment?" border="0" class="em_full_img"
+                        src="https://images.emailaptitude.com/Cleancult/2020/July/7.24.20-Membership_on_Hold/CC_06.2020_MembershipOnHold_01_03_02.jpg"
                         style="border:0;outline:none;display:block;display:block; font-family:Arial, sans-serif; font-size:22px; line-height: 26px; color: #00794d; max-width:600px;"
                         width="600" /> </a> </td>
                 </tr>
@@ -125,35 +135,59 @@
                       width="100%">
 
                       <tr>
-                        <td align="center" style="border-collapse:collapse;mso-line-height-rule:exactly">
-                          <table align="center" border="0" cellpadding="0" cellspacing="0" class="em_wrapper"
-                            style="border-collapse:collapse;mso-table-slspace:0;mso-table-rspace:0; color:#00794d;"
-                            width="100%">
+                        <td align="center" valign="top">
+                          <table align="center" border="0" cellpadding="0" cellspacing="0" style="width:600px;"
+                            width="600">
                             <tr>
-                              <td class="em_side"
-                                style="border-collapse:collapse;mso-line-height-rule:exactly;width: 50px;" width="50">
+                              <td align="center" valign="top">
+                                <table align="center" border="0" cellpadding="0" cellspacing="0" style="width:600px;"
+                                  width="600">
+                                  <tr>
+                                    <td align="center" valign="top">
+                                      <table align="center" bgcolor="#ffffff" border="0" cellpadding="0" cellspacing="0"
+                                        class="block-grid four-up no-stack" style="width:515px; max-width: 515px;"
+                                        width="515">
+                                        {% for cart_item in event.items %}
+                                        <tr>
+                                          <td
+                                            style="font-size:14px;text-align:center;font-family:'Fira Sans', 'Lucida Sans Unicode', 'Lucida Grande', sans-serif; max-width: 320px; min-width: 128px; display: table-cell; vertical-align: top; align: left;">
+                                            <img alt="{{ cart_item.name }}" src="{{ cart_item.image_url }}"
+                                              style="max-width: 60px; text-align: left; border-radius: 100px; margin-right: 60px; margin-bottom: 15px;"
+                                              width="60" />
+                                          </td>
+                                          <td
+                                            style="font-size: 12px; line-height: 18px; font-family: 'futura-pt', sans-serif; letter-spacing: .01em; font-size: 14px; line-height: 26px; color: #00794d; text-decoration: none; text-align: left; height: 60px; display: flex; justify-content: center; align-items: center;max-width: 320px; min-width: 128px; display: table-cell; vertical-align: top; align: left;">
+                                            <p style="font-size: 14px;line-height: 24px;margin: 0;padding-top: 15px;">
+                                              <span style="font-size: 14px; line-height: 24px;">
+                                                {{ cart_item.name }}</span>
+                                              {% if cart_item.size_and_scent %}
+                                              <br />
+                                              <span style="font-size: 11px; line-height: 18px;">
+                                                {{ cart_item.size_and_scent }}</span>
+                                              {% endif %}
+                                            </p>
+                                          </td>
+                                          <td align="center"
+                                            style="font-weight: 700; font-family: 'futura-pt-bold', sans-serif; letter-spacing: .01em; font-size: 20px; line-height: 24px; color: #00794d; text-decoration: none;max-width: 320px; min-width: 128px; display: table-cell; vertical-align: top; align: left;">
+                                            <p
+                                              style="font-size: 18px; line-height: 22px; text-align: right; margin: 0;">
+                                              <span
+                                                style="font-size: 18px; line-height: 22px;">&times;{{ cart_item.quantity }}</span>
+                                            </p>
+                                          </td>
+                                        </tr>
+                                        {% endfor %}
+                                      </table>
+                                    </td>
+                                  </tr>
+                                </table>
                               </td>
-                              <td align="left" class="emf1"
-                                style="border-collapse:collapse;mso-line-height-rule:exactly;font-family:'Lato', 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 22px; line-height: 30px; color:#00794d; letter-spacing: .01em; width: 125px; height: 125px;"
-                                width="125" height="125" valign="top"><img src="{{ cart_item.image_url }}" alt=""></td>
-                              <td align="left" class="em_side"
-                                style="border-collapse:collapse;mso-line-height-rule:exactly;width: 20px;" width="20">
-                              </td>
-                              <td align="left">{{ cart_item.name }}</td>
-                              <td align="right">{{ cart_item.quantity }}</td>
-                              <td class="em_side"
-                                style="border-collapse:collapse;mso-line-height-rule:exactly;width: 50px;" width="50">
-                              </td>
-                            </tr>
-
-                            <tr>
-                              <td align="center" height="40"
-                                style="border-collapse:collapse;mso-line-height-rule:exactly;line-height:1px; font-size:1px; height: 40px;"
-                                valign="top"> </td>
                             </tr>
                           </table>
                         </td>
                       </tr>
+
+
                     </table>
                   </td>
                 </tr>
