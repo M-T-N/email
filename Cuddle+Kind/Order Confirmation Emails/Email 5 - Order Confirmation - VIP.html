@@ -20,15 +20,15 @@
 
 </xml><![endif]-->
 <html>
-  <head>
-    <title>
-      cuddle+kind
-    </title>
-    <meta content="IE=edge" http-equiv="X-UA-Compatible"/>
-    <meta content="width=device-width, initial-scale=1.0 " name="viewport"/>
-    <meta content="telephone=no" name="format-detection"/>
-    <style type="text/css">
 
+<head>
+  <title>
+    cuddle+kind
+  </title>
+  <meta content="IE=edge" http-equiv="X-UA-Compatible" />
+  <meta content="width=device-width, initial-scale=1.0 " name="viewport" />
+  <meta content="telephone=no" name="format-detection" />
+  <style type="text/css">
     body {
 
       margin: 0 auto;
@@ -152,18 +152,21 @@
 
 
     }
-
   </style>
-<!-- == Header Section == -->
-  </head>
-  <body>
-    <table bgcolor="#ffffff" border="0" cellpadding="0" cellspacing="0" style="table-layout:fixed;" width="100%">      
-      <tr>        
-        <td align="center" valign="top">          
-          <table align="center" border="0" cellpadding="0" cellspacing="0" style="width:600px;" width="600">            <!-- preview message section start here-->
-            <tr>              
-              <td bgcolor="#ffffff" style="line-height:0px; font-size:0px;font-family:Arial, sans-serif;text-align:center;color:#ffffff;" valign="top">
-                Check out your new Kind Rewards balance!
+  <!-- == Header Section == -->
+</head>
+
+<body>
+  <table bgcolor="#ffffff" border="0" cellpadding="0" cellspacing="0" style="table-layout:fixed;" width="100%">
+    <tr>
+      <td align="center" valign="top">
+        <table align="center" border="0" cellpadding="0" cellspacing="0" style="width:600px;" width="600">
+          <!-- preview message section start here-->
+          <tr>
+            <td bgcolor="#ffffff"
+              style="line-height:0px; font-size:0px;font-family:Arial, sans-serif;text-align:center;color:#ffffff;"
+              valign="top">
+              Check out your new Kind Rewards balance!
 
 
 
@@ -192,168 +195,213 @@
 
 
               &nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;
-              </td>
-            </tr>
-<!-- preview message section end here-->
-            <tr>              
-              <td align="center" valign="top">                <a href="https://cuddleandkind.com/" style="text-decoration:none;" target="_blank">
-                  <img alt="Cuddle + kind Stylish hand-knit dolls with an impact" border="0" src="https://images.emailaptitude.com/Cuddle_Kind/2020/Sept/Order%20Confirmation%20for%20Klaivyo/A/CK_T5A_Rewards_05vtwo_01.jpg" style="font-family:Arial, sans-serif; font-size:15px; line-height:25px; color:#000000; display:block; max-width:600px;" width="600"/></a>
-              </td>
-            </tr>
-          </table>
-        </td>
-      </tr>
-    </table>
-<!-- == //Header Section == -->
-<!-- == Body Section == -->
-    <table align="center" bgcolor="#ffffff" border="0" cellpadding="0" cellspacing="0" style="max-width: 600px !important;" width="600">      
-      <tr>        
-        <td align="center" valign="top">          
-          <table align="center" border="0" cellpadding="0" cellspacing="0" class="em_main_table" style="width:600px;" width="600">            
-            <tr>              
-              <td align="center" valign="top">                <a href="https://cuddleandkind.com/pages/shop" style="text-decoration:none;" target="_blank">
-                  <img alt="Thank You" border="0" src="https://images.emailaptitude.com/Cuddle_Kind/2020/Sept/Order%20Confirmation%20for%20Klaivyo/A/CK_T5A_Rewards_05_05.jpg" style="font-family:Arial, sans-serif; font-size:15px; line-height:25px; color:#000000; display:block; max-width:600px;" width="600"/></a>
-              </td>
-            </tr>
-            <tr>              
-              <td align="center" valign="top">                <a href="https://cuddleandkind.com/pages/shop" style="text-decoration:none;" target="_blank">
-                  <img alt="Order Summary" border="0" src="https://images.emailaptitude.com/Cuddle_Kind/2020/Sept/Order%20Confirmation%20for%20Klaivyo/A/CK_T5A_Rewards_05_08.jpg" style="font-family:Arial, sans-serif; font-size:15px; line-height:25px; color:#000000; display:block; max-width:600px;" width="600"/></a>
-              </td>
-            </tr>
-<!-- Order Details --> {% for item in event.extra.line_items %}
-            <tr>              
-              <td align="left" valign="top">                
-                <table bgcolor="#ffffff" border="0" cellpadding="0" cellspacing="0" style="font-family:'Montserrat','century gothic', sans-serif;" width="100%">                  
-                  <tr>                    
-                    <td align="left" valign="top">
-                      {% catalog item.product_id unpublished="cancel" %}
-                      <img alt="{{ catalog_item.title }}" border="0" src="{{ catalog_item.featured_image.thumbnail.src }}" sstyle="font-family:'Montserrat','century gothic', sans-serif; line-height:20px; color:#000000; max-width:120px; text-align:left;" width="120"/> {% endcatalog %}
-                    </td>
-                    <td align="center" style="border-collapse: collapse; font-size: 18px;text-align:left;width:280px;color:#696969;" valign="bottom" width="280">
-                      {{ item.product.title }}
-                    </td>
-                    <td align="center" style="border-collapse: collapse; font-size: 18px;text-align:left;color:#696969;" valign="bottom">
-                      ${{ item.line_price|floatformat:2 }}
-                    </td>
-                  </tr>
-                </table>
-              </td>
-            </tr>{% endfor %}
-            <td align="center" valign="top">              
-              <img alt="Divider" border="0" src="https://images.emailaptitude.com/Cuddle_Kind/2020/Sept/Order%20Confirmation%20for%20Klaivyo/A/CK_T5A_Rewards_05_09.jpg" style="font-family:Arial, sans-serif; font-size:15px; line-height:25px; color:#000000; display:block; max-width:600px;" width="600"/>
             </td>
-            <tr>              
-              <td>                
-                <table bgcolor="#ffffff" border="0" cellpadding="0" cellspacing="0" style="font-family:'Montserrat','century gothic', sans-serif;" width="100%">                  
-                  <tr>                    
-                    <td style="width: 45px;" width="45"></td>
-                    <td style="width: 510px;" width="510">                      
-                      <table bgcolor="#ffffff" border="0" cellpadding="0" cellspacing="0" width="100%">                        
-                        <tr>                          
-                          <td height="30" style="height: 30px"></td>
-                        </tr>
-                        <tr>                          
-                          <td align="left" style="font-size: 25px;">                            <span style="color:#696969;">
+          </tr>
+          <!-- preview message section end here-->
+          <tr>
+            <td align="center" valign="top"> <a href="https://cuddleandkind.com/" style="text-decoration:none;"
+                target="_blank">
+                <img alt="Cuddle + kind Stylish hand-knit dolls with an impact" border="0"
+                  src="https://images.emailaptitude.com/Cuddle_Kind/2020/Sept/Order%20Confirmation%20for%20Klaivyo/A/CK_T5A_Rewards_05vtwo_01.jpg"
+                  style="font-family:Arial, sans-serif; font-size:15px; line-height:25px; color:#000000; display:block; max-width:600px;"
+                  width="600" /></a>
+            </td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+  </table>
+  <!-- == //Header Section == -->
+  <!-- == Body Section == -->
+  <table align="center" bgcolor="#ffffff" border="0" cellpadding="0" cellspacing="0"
+    style="max-width: 600px !important;" width="600">
+    <tr>
+      <td align="center" valign="top">
+        <table align="center" border="0" cellpadding="0" cellspacing="0" class="em_main_table" style="width:600px;"
+          width="600">
+          <tr>
+            <td align="center" valign="top"> <a href="https://cuddleandkind.com/pages/shop"
+                style="text-decoration:none;" target="_blank">
+                <img alt="Thank You" border="0"
+                  src="https://images.emailaptitude.com/Cuddle_Kind/2020/Sept/Order%20Confirmation%20for%20Klaivyo/A/CK_T5A_Rewards_05_05.jpg"
+                  style="font-family:Arial, sans-serif; font-size:15px; line-height:25px; color:#000000; display:block; max-width:600px;"
+                  width="600" /></a>
+            </td>
+          </tr>
+          <tr>
+            <td align="center" valign="top"> <a href="https://cuddleandkind.com/pages/shop"
+                style="text-decoration:none;" target="_blank">
+                <img alt="Order Summary" border="0"
+                  src="https://images.emailaptitude.com/Cuddle_Kind/2020/Sept/Order%20Confirmation%20for%20Klaivyo/A/CK_T5A_Rewards_05_08.jpg"
+                  style="font-family:Arial, sans-serif; font-size:15px; line-height:25px; color:#000000; display:block; max-width:600px;"
+                  width="600" /></a>
+            </td>
+          </tr>
+          <!-- Order Details --> {% for item in event.extra.line_items %}
+          <tr>
+            <td align="left" valign="top">
+              <table bgcolor="#ffffff" border="0" cellpadding="0" cellspacing="0"
+                style="font-family:'Montserrat','century gothic', sans-serif;" width="100%">
+                <tr>
+                  <td align="left" valign="top">
+                    {% catalog item.product_id unpublished="cancel" %}
+                    <img alt="{{ catalog_item.title }}" border="0" src="{{ catalog_item.featured_image.thumbnail.src }}"
+                      sstyle="font-family:'Montserrat','century gothic', sans-serif; line-height:20px; color:#000000; max-width:120px; text-align:left;"
+                      width="120" /> {% endcatalog %}
+                  </td>
+                  <td align="center"
+                    style="border-collapse: collapse; font-size: 18px;text-align:left;width:280px;color:#696969;"
+                    valign="bottom" width="280">
+                    {{ item.product.title }}
+                  </td>
+                  <td align="center" style="border-collapse: collapse; font-size: 18px;text-align:left;color:#696969;"
+                    valign="bottom">
+                    ${{ item.line_price|floatformat:2 }}
+                  </td>
+                </tr>
+              </table>
+            </td>
+          </tr>{% endfor %}
+          <td align="center" valign="top">
+            <img alt="Divider" border="0"
+              src="https://images.emailaptitude.com/Cuddle_Kind/2020/Sept/Order%20Confirmation%20for%20Klaivyo/A/CK_T5A_Rewards_05_09.jpg"
+              style="font-family:Arial, sans-serif; font-size:15px; line-height:25px; color:#000000; display:block; max-width:600px;"
+              width="600" />
+          </td>
+          <tr align="center" valign="top" style="width: 600px;" width="600">
+            <td>
+              <table bgcolor="#ffffff" border="0" cellpadding="0" cellspacing="0"
+                style="font-family:'Montserrat','century gothic', sans-serif;" width="100%">
+                <tr>
+                  <td style="width: 45px;" width="45"></td>
+                  <td style="width: 510px;" width="510">
+                    <table bgcolor="#ffffff" border="0" cellpadding="0" cellspacing="0" width="100%">
+                      <tr>
+                        <td height="30" style="height: 30px"></td>
+                      </tr>
+                      <tr>
+                        <td align="left" style="font-size: 25px;"> <span style="color:#696969;">
 
-                                  Subtotal </span>
-                          </td>
-                          <td align="right" style="font-size: 20px;">                            <span style="color:#696969;">
+                            Subtotal </span>
+                        </td>
+                        <td align="right" style="font-size: 20px;"> <span style="color:#696969;">
 
-                                  ${{ event.extra.subtotal_price }} </span>
-                          </td>
-                        </tr>
-                        <tr>                          
-                          <td height="20" style="height: 20px"></td>
-                        </tr>
-                        <tr>                          
-                          <td align="left" style="font-size: 25px;">                            <span style="color:#696969;">
+                            ${{ event.extra.subtotal_price }} </span>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td height="20" style="height: 20px"></td>
+                      </tr>
+                      <tr>
+                        <td align="left" style="font-size: 25px;"> <span style="color:#696969;">
 
-                                  Shipping </span>
-                          </td>
-                          <td align="right" style="font-size: 20px;">                            <span style="color:#696969;">
+                            Shipping </span>
+                        </td>
+                        <td align="right" style="font-size: 20px;"> <span style="color:#696969;">
 
-                                  ${{ event.extra.shipping_lines.0.price }} </span>
-                          </td>
-                        </tr>
-                        <tr>                          
-                          <td height="30" style="height: 30px"></td>
-                        </tr>
-                      </table>
-                    </td>
-                    <td style="width: 45px;" width="45"></td>
-                  </tr>
-                </table>
-              </td>
-            </tr>
-            <tr>              
-              <td align="center" valign="top">                
-                <img alt="Divider" border="0" src="https://images.emailaptitude.com/Cuddle_Kind/2020/Sept/Order%20Confirmation%20for%20Klaivyo/A/CK_T5A_Rewards_05_09.jpg" style="font-family:Arial, sans-serif; font-size:15px; line-height:25px; color:#000000; display:block; max-width:600px;" width="600"/>
-              </td>
-            </tr>
-            <tr>              
-              <td>                
-                <table bgcolor="#ffffff" border="0" cellpadding="0" cellspacing="0" style="font-family:'Montserrat','century gothic', sans-serif;" width="100%">                  
-                  <tr>                    
-                    <td style="width: 45px;" width="45"></td>
-                    <td style="width: 510px;" width="510">                      
-                      <table bgcolor="#ffffff" border="0" cellpadding="0" cellspacing="0" width="100%">                        
-                        <tr>                          
-                          <td height="30" style="height: 30px"></td>
-                        </tr>
-                        <tr>                          
-                          <td align="left" style="font-size: 25px;">                            
-                            <span style="color:#696969;">
+                            ${{ event.extra.shipping_lines.0.price }} </span>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td height="30" style="height: 30px"></td>
+                      </tr>
+                    </table>
+                  </td>
+                  <td style="width: 45px;" width="45"></td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+          <tr>
+            <td align="center" valign="top">
+              <img alt="Divider" border="0"
+                src="https://images.emailaptitude.com/Cuddle_Kind/2020/Sept/Order%20Confirmation%20for%20Klaivyo/A/CK_T5A_Rewards_05_09.jpg"
+                style="font-family:Arial, sans-serif; font-size:15px; line-height:25px; color:#000000; display:block; max-width:600px;"
+                width="600" />
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <table bgcolor="#ffffff" border="0" cellpadding="0" cellspacing="0"
+                style="font-family:'Montserrat','century gothic', sans-serif;" width="100%">
+                <tr>
+                  <td style="width: 45px;" width="45"></td>
+                  <td style="width: 510px;" width="510">
+                    <table bgcolor="#ffffff" border="0" cellpadding="0" cellspacing="0" width="100%">
+                      <tr>
+                        <td height="30" style="height: 30px"></td>
+                      </tr>
+                      <tr>
+                        <td align="left" style="font-size: 25px;">
+                          <span style="color:#696969;">
 
                             Total </span>
-                          </td>
-                          <td align="right" style="font-size: 20px;">                            
-                            <span style="color:#696969;">
+                        </td>
+                        <td align="right" style="font-size: 20px;">
+                          <span style="color:#696969;">
 
                             ${{ event.extra.total_price_usd }} </span>
-                          </td>
-                        </tr>
-                        <tr>                          
-                          <td height="30" style="height: 30px"></td>
-                        </tr>
-                      </table>
-                    </td>
-                    <td style="width: 45px;" width="45"></td>
-                  </tr>
-                </table>
-              </td>
-            </tr>
-            <tr>              
-              <td align="center" valign="top">                
-                <img alt="Divider" border="0" src="https://images.emailaptitude.com/Cuddle_Kind/2020/Sept/Order%20Confirmation%20for%20Klaivyo/A/CK_T5A_Rewards_05_09.jpg" style="font-family:Arial, sans-serif; font-size:15px; line-height:25px; color:#000000; display:block; max-width:600px;" width="600"/>
-              </td>
-            </tr>
-          </table>
-        </td>
-      </tr>
-<!-- //Order Details -->
-      <tr>        
-        <td align="center" valign="top">          <a href="https://cuddleandkind.com/pages/shop" style="text-decoration:none;" target="_blank">
-            <img alt="Keep an eye out" border="0" src="https://images.emailaptitude.com/Cuddle_Kind/2020/Sept/Order%20Confirmation%20for%20Klaivyo/A/CK_T5A_Rewards_05_10.jpg" style="font-family:Arial, sans-serif; font-size:15px; line-height:25px; color:#000000; display:block; max-width:600px;" width="600"/></a>
-        </td>
-      </tr>
-<!-- Reward Points -->
-      <tr>        
-        <td align="center" valign="middle">          
-          <table align="center" bgcolor="#fcebe3" border="0" cellpadding="0" cellspacing="0" class="em_wrapper" style="width:600px; max-width:600px; background-color: #fcebe3;" width="600">            
-            <tr>              
-              <td height="40" style="height: 40px"></td>
-            </tr>
-            <tr>              
-              <td align="center" class="em_font17" style="font-family:'Montserrat','century gothic', sans-serif; color:#575759; font-size:30px; font-weight:300; line-height:22px; " valign="middle">                
-                <a href="https://cuddleandkind.com/pages/shop" style="text-decoration:none; color:#575759; display:block; line-height: 1.4;" target="_blank">{{ first_name|default:'Friend' }}, you just<br/>earned<span style="color: #fcb492;">
-                    <strong>10% back</strong></span><br/>on this order!</a>
-              </td>
-            </tr>
-          </table>
-        </td>
-      </tr>
-      <tr>        
-        <td align="center" background="https://images.emailaptitude.com/Cuddle_Kind/2020/Sept/Order%20Confirmation%20for%20Klaivyo/B/CK_T5B_Rewards_04_02.jpg" class="em_hauto" style="background-repeat:no-repeat; background-size:cover; background-position:center top; height: 345px; max-width: 600px !important;" valign="middle" width="600">          <!--[if gte mso 9]>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td height="30" style="height: 30px"></td>
+                      </tr>
+                    </table>
+                  </td>
+                  <td style="width: 45px;" width="45"></td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+          <tr>
+            <td align="center" valign="top">
+              <img alt="Divider" border="0"
+                src="https://images.emailaptitude.com/Cuddle_Kind/2020/Sept/Order%20Confirmation%20for%20Klaivyo/A/CK_T5A_Rewards_05_09.jpg"
+                style="font-family:Arial, sans-serif; font-size:15px; line-height:25px; color:#000000; display:block; max-width:600px;"
+                width="600" />
+            </td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+    <!-- //Order Details -->
+    <tr>
+      <td align="center" valign="top"> <a href="https://cuddleandkind.com/pages/shop" style="text-decoration:none;"
+          target="_blank">
+          <img alt="Keep an eye out" border="0"
+            src="https://images.emailaptitude.com/Cuddle_Kind/2020/Sept/Order%20Confirmation%20for%20Klaivyo/A/CK_T5A_Rewards_05_10.jpg"
+            style="font-family:Arial, sans-serif; font-size:15px; line-height:25px; color:#000000; display:block; max-width:600px;"
+            width="600" /></a>
+      </td>
+    </tr>
+    <!-- Reward Points -->
+    <tr>
+      <td align="center" valign="middle">
+        <table align="center" bgcolor="#fcebe3" border="0" cellpadding="0" cellspacing="0" class="em_wrapper"
+          style="width:600px; max-width:600px; background-color: #fcebe3;" width="600">
+          <tr>
+            <td height="40" style="height: 40px"></td>
+          </tr>
+          <tr>
+            <td align="center" class="em_font17"
+              style="font-family:'Montserrat','century gothic', sans-serif; color:#575759; font-size:30px; font-weight:300; line-height:22px; "
+              valign="middle">
+              <a href="https://cuddleandkind.com/pages/shop"
+                style="text-decoration:none; color:#575759; display:block; line-height: 1.4;"
+                target="_blank">{{ first_name|default:'Friend' }}, you just<br />earned<span style="color: #fcb492;">
+                  <strong>10% back</strong></span><br />on this order!</a>
+            </td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+    <tr>
+      <td align="center"
+        background="https://images.emailaptitude.com/Cuddle_Kind/2020/Sept/Order%20Confirmation%20for%20Klaivyo/B/CK_T5B_Rewards_04_02.jpg"
+        class="em_hauto"
+        style="background-repeat:no-repeat; background-size:cover; background-position:center top; height: 345px; max-width: 600px !important;"
+        valign="middle" width="600">
+        <!--[if gte mso 9]>
 
             <v:image xmlns:v="urn:schemas-microsoft-com:vml" fill="true" stroke="false" style=" border: 0;display: inline-block; width:600px;" src="https://images.emailaptitude.com/Cuddle_Kind/2020/Sept/Order%20Confirmation%20for%20Klaivyo/B/CK_T5B_Rewards_04_02.jpg" />
 
@@ -364,21 +412,27 @@
             <v:textbox inset="0,0,0,0">
 
             <![endif]-->
-          <table align="center" border="0" cellpadding="0" cellspacing="0" width="80%">            <!--REWARDS BALANCE-->
-            <tr>              
-              <td align="center" valign="middle">                
-                <table align="center" border="0" cellpadding="0" cellspacing="0" class="em_wrapper" style="width:600px; max-width:600px;" width="600">                  
-                  <tr>                    
-                    <td align="center" class="em_font17" style="font-family:'Helvetica Neue', Arial, sans-serif; font-size:64px; color:#FCB492; letter-spacing:0px;" valign="middle">                      
-                      <a href="https://cuddleandkind.com/pages/shop" style="text-decoration:none; color:#FCB492; display:block; line-height: 20px;" target="_blank">{{ person|lookup:'swell_credit_balance' }}</a>
-                    </td>
-                  </tr>
-                </table>
-              </td>
-            </tr>
-<!--//REWARDS BALANCE-->
-          </table>
-<!--[if gte mso 9]>
+        <table align="center" border="0" cellpadding="0" cellspacing="0" width="80%">
+          <!--REWARDS BALANCE-->
+          <tr>
+            <td align="center" valign="middle">
+              <table align="center" border="0" cellpadding="0" cellspacing="0" class="em_wrapper"
+                style="width:600px; max-width:600px;" width="600">
+                <tr>
+                  <td align="center" class="em_font17"
+                    style="font-family:'Helvetica Neue', Arial, sans-serif; font-size:64px; color:#FCB492; letter-spacing:0px;"
+                    valign="middle">
+                    <a href="https://cuddleandkind.com/pages/shop"
+                      style="text-decoration:none; color:#FCB492; display:block; line-height: 20px;"
+                      target="_blank">{{ person|lookup:'swell_credit_balance' }}</a>
+                  </td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+          <!--//REWARDS BALANCE-->
+        </table>
+        <!--[if gte mso 9]>
 
             </v:textbox>
 
@@ -387,200 +441,274 @@
             </v:image>
 
             <![endif]-->
-        </td>
-      </tr>
-      <tr>        
-        <td align="center" valign="top">          <a href="https://cuddleandkind.com/pages/shop" style="text-decoration:none;" target="_blank">
-            <img alt="Redeem Now" border="0" src="https://images.emailaptitude.com/Cuddle_Kind/2020/Sept/Order%20Confirmation%20for%20Klaivyo/B/CK_T5B_Rewards_04_01.jpg" style="font-family:Arial, sans-serif; font-size:15px; line-height:25px; color:#000000; display:block; max-width:600px;" width="600"/></a>
-        </td>
-      </tr>
-<!-- //Reward Points -->
-      <tr>        
-        <td align="center" valign="top">          <a href="https://cuddleandkind.com/pages/shop" style="text-decoration:none;" target="_blank">
-            <img alt="Customer Information" border="0" src="https://images.emailaptitude.com/Cuddle_Kind/2020/Sept/Order%20Confirmation%20for%20Klaivyo/A/CK_T5A_Rewards_05_14.jpg" style="font-family:Arial, sans-serif; font-size:15px; line-height:25px; color:#000000; display:block; max-width:600px;" width="600"/></a>
-        </td>
-      </tr>
-<!-- Customer Information -->
-      <tr>        
-        <td align="center" valign="middle">          
-          <table align="center" bgcolor="#fffff" border="0" cellpadding="0" cellspacing="0" class="em_wrapper" style="width:500px; max-width:500px; background-color: #ffffff;" width="500">            
-            <tr>              
-              <td height="40" style="height: 40px"></td>
-            </tr>
-            <tr>              
-              <td align="center" class="em_font17" style="font-family:'Montserrat','century gothic', sans-serif;color:#575759; font-size:30px; font-weight:300; line-height:22px; " valign="middle">                
-              </td>
-            </tr>
-            <tr>              
-              <td align="left" style="border-collapse: collapse; font-size: 20px; font-family:'Montserrat','century gothic', sans-serif;">                
-                <bold>                  <span style="color:#696969;"><strong>Contact information</strong></span>
-                </bold>
-              </td>
-            </tr>
-            <tr>              
-              <td align="left" style="border-collapse: collapse; font-size: 18px; font-family:'Montserrat','century gothic', sans-serif;">                <span style="color:#696969;">{{ event.extra.email }}</span>
-              </td>
-            </tr>
-            <tr>              
-              <td height="20" style="border-collapse: collapse; height: 20px;">                
-              </td>
-            </tr>
-            <tr>              
-              <td align="left" style="border-collapse: collapse; font-size: 20px; font-family:'Montserrat','century gothic', sans-serif;">                
-                <bold>                  <span style="color:#696969;"><strong>Shipping address</strong></span>
-                </bold>
-              </td>
-            </tr>
-            <tr>              
-              <td align="left" style="border-collapse: collapse; font-size: 18px; font-family:'Montserrat','century gothic', sans-serif;">                <span style="color:#696969;">{{ event.extra.shipping_address.first_name }} {{ event.extra.shipping_address.last_name }}</span>
-              </td>
-            </tr>
-            <tr>              
-              <td align="left" style="border-collapse: collapse; font-size: 18px; font-family:'Montserrat','century gothic', sans-serif;">                <span style="color:#696969;">{{ event.extra.shipping_address.address1 }}</span>
-              </td>
-            </tr>
-            <tr>              
-              <td align="left" style="border-collapse: collapse; font-size: 18px; font-family:'Montserrat','century gothic', sans-serif;">                <span style="color:#696969;">{{ event.extra.shipping_address.address2 }}</span>
-              </td>
-            </tr>
-            <tr>              
-              <td align="left" style="border-collapse: collapse; font-size: 18px; font-family:'Montserrat','century gothic', sans-serif;">                <span style="color:#696969;">{{ event.extra.shipping_address.city }}, {{ event.extra.shipping_address.province_code }} {{ event.extra.shipping_address.zip }}</span>
-              </td>
-            </tr>
-            <tr>              
-              <td align="left" style="border-collapse: collapse; font-size: 18px; font-family:'Montserrat','century gothic', sans-serif;">                <span style="color:#696969;">{{ event.extra.shipping_address.country }}</span>
-              </td>
-            </tr>
-            <tr>              
-              <td height="20" style="border-collapse: collapse; height: 20px; font-family:'Montserrat','century gothic', sans-serif;">                <span style="color:#696969;"></span>
-              </td>
-            </tr>
-            <tr>              
-              <td align="left" style="border-collapse: collapse; font-size: 20px; font-family:'Montserrat','century gothic', sans-serif;">                
-                <bold>                  <span style="color:#696969;"><strong>Billing address</strong></span>
-                </bold>
-              </td>
-            </tr>
-            <tr>              
-              <td align="left" style="border-collapse: collapse; font-size: 18px;font-family:'Montserrat','century gothic', sans-serif;">                <span style="color:#696969;">{{ event.extra.billing_address.first_name }} {{ event.extra.billing_address.last_name }}</span>
-              </td>
-            </tr>
-            <tr>              
-              <td align="left" style="border-collapse: collapse; font-size: 18px; font-family:'Montserrat','century gothic', sans-serif;">                <span style="color:#696969;">{{ event.extra.billing_address.address1 }}</span>
-              </td>
-            </tr>
-            <tr>              
-              <td align="left" style="border-collapse: collapse; font-size: 18px; font-family:'Montserrat','century gothic', sans-serif;">                <span style="color:#696969;">{{ event.extra.billing_address.address2 }}</span>
-              </td>
-            </tr>
-            <tr>              
-              <td align="left" style="border-collapse: collapse; font-size: 18px; font-family:'Montserrat','century gothic', sans-serif;">                <span style="color:#696969;">{{ event.extra.billing_address.city }}, {{ event.extra.billing_address.province_code }} {{ event.extra.billing_address.zip }}</span>
-              </td>
-            </tr>
-            <tr>              
-              <td align="left" style="border-collapse: collapse; font-size: 18px; font-family:'Montserrat','century gothic', sans-serif;">                
-                <p>                  <span style="color:#696969;">{{ event.extra.billing_address.country }}</span>
-                </p>
-                <p>                  <span style="color:#696969;"></span>
-                </p>
-              </td>
-            </tr>
-            <tr>              
-              <td height="20" style="height: 20px"></td>
-            </tr>
-            <tr>              
-              <td height="30" style="height: 30px"></td>
-            </tr>
-          </table>
-        </td>
-      </tr>
-<!-- //Customer Information -->
-      <tr>        
-        <td align="center" valign="top">          <a href="mailto:%20hello@cuddleandkind.com" style="text-decoration:none;" target="_blank">
-            <img alt="If you have any questions, reply to this email or contact us at hello@cuddleandkind.com" border="0" src="https://images.emailaptitude.com/Cuddle_Kind/2020/Sept/Order%20Confirmation%20for%20Klaivyo/A/CK_T5A_Rewards_05_16.jpg" style="font-family:Arial, sans-serif; font-size:15px; line-height:25px; color:#000000; display:block; max-width:600px;" width="600"/></a>
-        </td>
-      </tr>
-    </table>
-<!-- == //Body Section == -->
-<!-- == Footer Section == -->
-    <table bgcolor="#ffffff" border="0" cellpadding="0" cellspacing="0" class="em_full_wrap" width="100%">      
-      <tr>        
-        <td align="center" valign="top">          
-          <table align="center" border="0" cellpadding="0" cellspacing="0" style="width:600px; background-color:#ffffff;" width="600">            
-            <tr>              
-              <td align="center" valign="top">                <a href="https://cuddleandkind.com/" style="text-decoration:none;" target="_blank">
-                  <img alt="Cuddle + kind | 1 doll = 10 meals | artisan made lovingly handcrafted &hearts; ethically produced" border="0" src="http://images.emailaptitude.com/Cuddle_Kind/2019/October/Welcome_Series_T1/img16.jpg" style="font-family:Arial, sans-serif; font-size:15px; line-height:25px; color:#000000; display:block; max-width:600px;" width="600"/></a>
-              </td>
-            </tr>
-            <tr>              
-              <td align="center" valign="top">                
-                <table align="center" border="0" cellpadding="0" cellspacing="0" style="background-color:#ffffff;" width="100%">                  
-                  <tr>                    
-                    <td height="40" style="height:40px;">
-                      &nbsp;
-                    </td>
-                  </tr>
-                  <tr>                    
-                    <td align="center" valign="top">                      
-                      <table align="center" border="0" cellpadding="0" cellspacing="0">                        
-                        <tr>                          
-                          <td align="center" valign="middle">                            <a href="https://instagram.com/cuddleandkind/" style="text-decoration:none;" target="_blank">
-                              <img alt="insta" border="0" src="https://images.emailaptitude.com/Cuddle_Kind/2020/Sept/Order%20Confirmation%20for%20Klaivyo/A/social/CK_T5A_Rewards_05_22.jpg" style="font-family:Arial, sans-serif; font-size:15px; line-height:25px; color:#000000; display:block; max-width:40px;" width="40"/></a>
-                          </td>
-                          <td style="width:56px;" width="56">
-                            &nbsp;
-                          </td>
-                          <td align="center" valign="middle">                            <a href="https://www.facebook.com/cuddleandkind" style="text-decoration:none;" target="_blank">
-                              <img alt="fb" border="0" src="https://images.emailaptitude.com/Cuddle_Kind/2020/Sept/Order%20Confirmation%20for%20Klaivyo/A/social/CK_T5A_Rewards_05_18.jpg" style="font-family:Arial, sans-serif; font-size:15px; line-height:25px; color:#000000; display:block; max-width:19px;" width="19"/></a>
-                          </td>
-                          <td style="width:56px;" width="56">
-                            &nbsp;
-                          </td>
-                          <td align="center" valign="middle">                            <a href="https://www.pinterest.com/Cuddleandkind/" style="text-decoration:none;" target="_blank">
-                              <img alt="pinterest" border="0" src="https://images.emailaptitude.com/Cuddle_Kind/2020/Sept/Order%20Confirmation%20for%20Klaivyo/A/social/CK_T5A_Rewards_05_18-06.jpg" style="font-family:Arial, sans-serif; font-size:15px; line-height:25px; color:#000000; display:block; max-width:31px;" width="31"/></a>
-                          </td>
-                          <td style="width:56px;" width="56">
-                            &nbsp;
-                          </td>
-                          <td align="center" valign="middle">                            <a href="https://twitter.com/cuddleandkind" style="text-decoration:none;" target="_blank">
-                              <img alt="tw" border="0" src="https://images.emailaptitude.com/Cuddle_Kind/2020/Sept/Order%20Confirmation%20for%20Klaivyo/A/social/CK_T5A_Rewards_05_18-08.jpg" style="font-family:Arial, sans-serif; font-size:15px; line-height:25px; color:#000000; display:block; max-width:35px;" width="35"/></a>
-                          </td>
-                        </tr>
-                      </table>
-                    </td>
-                  </tr>
-                  <tr>                    
-                    <td height="40" style="height:40px;">
-                      &nbsp;
-                    </td>
-                  </tr>
-                  <tr>                    
-                    <td align="center" class="em_defaultlink" style="font-family:'Helvetica Neue', Arial, sans-serif; font-size:10px; line-height:16px; color:#54585a;" valign="top">
-                      No longer want to receive these emails?
-                      <a href="{% unsubscribe_link %}" style="color:#00b7cc; text-decoration:underline;" target="_blank">Unsubscribe.</a><br/> cuddle+kind US 5401 Eglinton Ave West
+      </td>
+    </tr>
+    <tr>
+      <td align="center" valign="top"> <a href="https://cuddleandkind.com/pages/shop" style="text-decoration:none;"
+          target="_blank">
+          <img alt="Redeem Now" border="0"
+            src="https://images.emailaptitude.com/Cuddle_Kind/2020/Sept/Order%20Confirmation%20for%20Klaivyo/B/CK_T5B_Rewards_04_01.jpg"
+            style="font-family:Arial, sans-serif; font-size:15px; line-height:25px; color:#000000; display:block; max-width:600px;"
+            width="600" /></a>
+      </td>
+    </tr>
+    <!-- //Reward Points -->
+    <tr>
+      <td align="center" valign="top"> <a href="https://cuddleandkind.com/pages/shop" style="text-decoration:none;"
+          target="_blank">
+          <img alt="Customer Information" border="0"
+            src="https://images.emailaptitude.com/Cuddle_Kind/2020/Sept/Order%20Confirmation%20for%20Klaivyo/A/CK_T5A_Rewards_05_14.jpg"
+            style="font-family:Arial, sans-serif; font-size:15px; line-height:25px; color:#000000; display:block; max-width:600px;"
+            width="600" /></a>
+      </td>
+    </tr>
+    <!-- Customer Information -->
+    <tr>
+      <td align="center" valign="middle">
+        <table align="center" bgcolor="#fffff" border="0" cellpadding="0" cellspacing="0" class="em_wrapper"
+          style="width:500px; max-width:500px; background-color: #ffffff;" width="500">
+          <tr>
+            <td height="40" style="height: 40px"></td>
+          </tr>
+          <tr>
+            <td align="center" class="em_font17"
+              style="font-family:'Montserrat','century gothic', sans-serif;color:#575759; font-size:30px; font-weight:300; line-height:22px; "
+              valign="middle">
+            </td>
+          </tr>
+          <tr>
+            <td align="left"
+              style="border-collapse: collapse; font-size: 20px; font-family:'Montserrat','century gothic', sans-serif;">
+              <bold> <span style="color:#696969;"><strong>Contact information</strong></span>
+              </bold>
+            </td>
+          </tr>
+          <tr>
+            <td align="left"
+              style="border-collapse: collapse; font-size: 18px; font-family:'Montserrat','century gothic', sans-serif;">
+              <span style="color:#696969;">{{ event.extra.email }}</span>
+            </td>
+          </tr>
+          <tr>
+            <td height="20" style="border-collapse: collapse; height: 20px;">
+            </td>
+          </tr>
+          <tr>
+            <td align="left"
+              style="border-collapse: collapse; font-size: 20px; font-family:'Montserrat','century gothic', sans-serif;">
+              <bold> <span style="color:#696969;"><strong>Shipping address</strong></span>
+              </bold>
+            </td>
+          </tr>
+          <tr>
+            <td align="left"
+              style="border-collapse: collapse; font-size: 18px; font-family:'Montserrat','century gothic', sans-serif;">
+              <span style="color:#696969;">{{ event.extra.shipping_address.first_name }}
+                {{ event.extra.shipping_address.last_name }}</span>
+            </td>
+          </tr>
+          <tr>
+            <td align="left"
+              style="border-collapse: collapse; font-size: 18px; font-family:'Montserrat','century gothic', sans-serif;">
+              <span style="color:#696969;">{{ event.extra.shipping_address.address1 }}</span>
+            </td>
+          </tr>
+          <tr>
+            <td align="left"
+              style="border-collapse: collapse; font-size: 18px; font-family:'Montserrat','century gothic', sans-serif;">
+              <span style="color:#696969;">{{ event.extra.shipping_address.address2 }}</span>
+            </td>
+          </tr>
+          <tr>
+            <td align="left"
+              style="border-collapse: collapse; font-size: 18px; font-family:'Montserrat','century gothic', sans-serif;">
+              <span style="color:#696969;">{{ event.extra.shipping_address.city }},
+                {{ event.extra.shipping_address.province_code }} {{ event.extra.shipping_address.zip }}</span>
+            </td>
+          </tr>
+          <tr>
+            <td align="left"
+              style="border-collapse: collapse; font-size: 18px; font-family:'Montserrat','century gothic', sans-serif;">
+              <span style="color:#696969;">{{ event.extra.shipping_address.country }}</span>
+            </td>
+          </tr>
+          <tr>
+            <td height="20"
+              style="border-collapse: collapse; height: 20px; font-family:'Montserrat','century gothic', sans-serif;">
+              <span style="color:#696969;"></span>
+            </td>
+          </tr>
+          <tr>
+            <td align="left"
+              style="border-collapse: collapse; font-size: 20px; font-family:'Montserrat','century gothic', sans-serif;">
+              <bold> <span style="color:#696969;"><strong>Billing address</strong></span>
+              </bold>
+            </td>
+          </tr>
+          <tr>
+            <td align="left"
+              style="border-collapse: collapse; font-size: 18px;font-family:'Montserrat','century gothic', sans-serif;">
+              <span style="color:#696969;">{{ event.extra.billing_address.first_name }}
+                {{ event.extra.billing_address.last_name }}</span>
+            </td>
+          </tr>
+          <tr>
+            <td align="left"
+              style="border-collapse: collapse; font-size: 18px; font-family:'Montserrat','century gothic', sans-serif;">
+              <span style="color:#696969;">{{ event.extra.billing_address.address1 }}</span>
+            </td>
+          </tr>
+          <tr>
+            <td align="left"
+              style="border-collapse: collapse; font-size: 18px; font-family:'Montserrat','century gothic', sans-serif;">
+              <span style="color:#696969;">{{ event.extra.billing_address.address2 }}</span>
+            </td>
+          </tr>
+          <tr>
+            <td align="left"
+              style="border-collapse: collapse; font-size: 18px; font-family:'Montserrat','century gothic', sans-serif;">
+              <span style="color:#696969;">{{ event.extra.billing_address.city }},
+                {{ event.extra.billing_address.province_code }} {{ event.extra.billing_address.zip }}</span>
+            </td>
+          </tr>
+          <tr>
+            <td align="left"
+              style="border-collapse: collapse; font-size: 18px; font-family:'Montserrat','century gothic', sans-serif;">
+              <p> <span style="color:#696969;">{{ event.extra.billing_address.country }}</span>
+              </p>
+              <p> <span style="color:#696969;"></span>
+              </p>
+            </td>
+          </tr>
+          <tr>
+            <td height="20" style="height: 20px"></td>
+          </tr>
+          <tr>
+            <td height="30" style="height: 30px"></td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+    <!-- //Customer Information -->
+    <tr>
+      <td align="center" valign="top"> <a href="mailto:%20hello@cuddleandkind.com" style="text-decoration:none;"
+          target="_blank">
+          <img alt="If you have any questions, reply to this email or contact us at hello@cuddleandkind.com" border="0"
+            src="https://images.emailaptitude.com/Cuddle_Kind/2020/Sept/Order%20Confirmation%20for%20Klaivyo/A/CK_T5A_Rewards_05_16.jpg"
+            style="font-family:Arial, sans-serif; font-size:15px; line-height:25px; color:#000000; display:block; max-width:600px;"
+            width="600" /></a>
+      </td>
+    </tr>
+  </table>
+  <!-- == //Body Section == -->
+  <!-- == Footer Section == -->
+  <table bgcolor="#ffffff" border="0" cellpadding="0" cellspacing="0" class="em_full_wrap" width="100%">
+    <tr>
+      <td align="center" valign="top">
+        <table align="center" border="0" cellpadding="0" cellspacing="0" style="width:600px; background-color:#ffffff;"
+          width="600">
+          <tr>
+            <td align="center" valign="top"> <a href="https://cuddleandkind.com/" style="text-decoration:none;"
+                target="_blank">
+                <img
+                  alt="Cuddle + kind | 1 doll = 10 meals | artisan made lovingly handcrafted &hearts; ethically produced"
+                  border="0" src="http://images.emailaptitude.com/Cuddle_Kind/2019/October/Welcome_Series_T1/img16.jpg"
+                  style="font-family:Arial, sans-serif; font-size:15px; line-height:25px; color:#000000; display:block; max-width:600px;"
+                  width="600" /></a>
+            </td>
+          </tr>
+          <tr>
+            <td align="center" valign="top">
+              <table align="center" border="0" cellpadding="0" cellspacing="0" style="background-color:#ffffff;"
+                width="100%">
+                <tr>
+                  <td height="40" style="height:40px;">
+                    &nbsp;
+                  </td>
+                </tr>
+                <tr>
+                  <td align="center" valign="top">
+                    <table align="center" border="0" cellpadding="0" cellspacing="0">
+                      <tr>
+                        <td align="center" valign="middle"> <a href="https://instagram.com/cuddleandkind/"
+                            style="text-decoration:none;" target="_blank">
+                            <img alt="insta" border="0"
+                              src="https://images.emailaptitude.com/Cuddle_Kind/2020/Sept/Order%20Confirmation%20for%20Klaivyo/A/social/CK_T5A_Rewards_05_22.jpg"
+                              style="font-family:Arial, sans-serif; font-size:15px; line-height:25px; color:#000000; display:block; max-width:40px;"
+                              width="40" /></a>
+                        </td>
+                        <td style="width:56px;" width="56">
+                          &nbsp;
+                        </td>
+                        <td align="center" valign="middle"> <a href="https://www.facebook.com/cuddleandkind"
+                            style="text-decoration:none;" target="_blank">
+                            <img alt="fb" border="0"
+                              src="https://images.emailaptitude.com/Cuddle_Kind/2020/Sept/Order%20Confirmation%20for%20Klaivyo/A/social/CK_T5A_Rewards_05_18.jpg"
+                              style="font-family:Arial, sans-serif; font-size:15px; line-height:25px; color:#000000; display:block; max-width:19px;"
+                              width="19" /></a>
+                        </td>
+                        <td style="width:56px;" width="56">
+                          &nbsp;
+                        </td>
+                        <td align="center" valign="middle"> <a href="https://www.pinterest.com/Cuddleandkind/"
+                            style="text-decoration:none;" target="_blank">
+                            <img alt="pinterest" border="0"
+                              src="https://images.emailaptitude.com/Cuddle_Kind/2020/Sept/Order%20Confirmation%20for%20Klaivyo/A/social/CK_T5A_Rewards_05_18-06.jpg"
+                              style="font-family:Arial, sans-serif; font-size:15px; line-height:25px; color:#000000; display:block; max-width:31px;"
+                              width="31" /></a>
+                        </td>
+                        <td style="width:56px;" width="56">
+                          &nbsp;
+                        </td>
+                        <td align="center" valign="middle"> <a href="https://twitter.com/cuddleandkind"
+                            style="text-decoration:none;" target="_blank">
+                            <img alt="tw" border="0"
+                              src="https://images.emailaptitude.com/Cuddle_Kind/2020/Sept/Order%20Confirmation%20for%20Klaivyo/A/social/CK_T5A_Rewards_05_18-08.jpg"
+                              style="font-family:Arial, sans-serif; font-size:15px; line-height:25px; color:#000000; display:block; max-width:35px;"
+                              width="35" /></a>
+                        </td>
+                      </tr>
+                    </table>
+                  </td>
+                </tr>
+                <tr>
+                  <td height="40" style="height:40px;">
+                    &nbsp;
+                  </td>
+                </tr>
+                <tr>
+                  <td align="center" class="em_defaultlink"
+                    style="font-family:'Helvetica Neue', Arial, sans-serif; font-size:10px; line-height:16px; color:#54585a;"
+                    valign="top">
+                    No longer want to receive these emails?
+                    <a href="{% unsubscribe_link %}" style="color:#00b7cc; text-decoration:underline;"
+                      target="_blank">Unsubscribe.</a><br /> cuddle+kind US 5401 Eglinton Ave West
 
 
 
                     Unit 210 Etobicoke, Ontario M9C 5K6
-                    </td>
-                  </tr>
-                </table>
-              </td>
-            </tr>
-            <tr>              
-              <td height="20" style="height:20px; line-height:0px; font-size:0px;">
-                &nbsp;
-              </td>
-            </tr>
-            <tr>              
-              <td class="em_hide" style="line-height:1px;min-width:600px;background-color:#ffffff;">                
-                <img alt="" border="0" height="1" src="http://images.emailaptitude.com/Cuddle_Kind/2019/October/Welcome_Series_T1/spacer.gif" style="max-height:1px; min-height:1px; display:block; width:600px; min-width:600px;" width="600"/>
-              </td>
-            </tr>
-          </table>
-        </td>
-      </tr>
-    </table>
-<!-- == //Footer Section == -->
-  </body>
+                  </td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+          <tr>
+            <td height="20" style="height:20px; line-height:0px; font-size:0px;">
+              &nbsp;
+            </td>
+          </tr>
+          <tr>
+            <td class="em_hide" style="line-height:1px;min-width:600px;background-color:#ffffff;">
+              <img alt="" border="0" height="1"
+                src="http://images.emailaptitude.com/Cuddle_Kind/2019/October/Welcome_Series_T1/spacer.gif"
+                style="max-height:1px; min-height:1px; display:block; width:600px; min-width:600px;" width="600" />
+            </td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+  </table>
+  <!-- == //Footer Section == -->
+</body>
+
 </html>
